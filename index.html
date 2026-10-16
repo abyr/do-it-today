@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do It Today</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%85%3C/text%3E%3C/svg%3E"
+    >
+    <link href="./styles.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+        <h1>Do It Today</h1>
+        <div class="controls">
+            <div>
+                <button id="btnPlanning" class="btn-secondary active">Plan</button>
+				<button id="btnFocus" class="btn-secondary">Focus</button>
+            </div>
+			<button id="btnClean" class="btn-danger">Clear</button>
+        </div>
+    </header>
+
+    <main class="board" id="boardLayout">
+        <!-- Today Column -->
+        <section class="column column-today" id="todayColumnSection">
+            <div class="column-header">
+                <span>Today</span>
+                <span id="todayCount" style="font-size: 0.9rem; font-weight: normal; color: #555;"></span>
+            </div>
+            <div class="task-input-container">
+                <input type="text" id="newTodayInput" class="task-input"
+					   placeholder="New task for today...">
+				<button id="addTodayButton" class="btn-primary">Add</button>
+            </div>
+            <div class="task-list" id="todayTaskList">
+                <!-- Tasks will be rendered here -->
+            </div>
+        </section>
+
+        <!-- Tomorrow / Backlog Column -->
+        <section class="column column-tomorrow" id="tomorrowColumnSection">
+            <div class="column-header">
+                <span>Tomorrow</span>
+                <span id="tomorrowCount" style="font-size: 0.9rem; font-weight: normal; color: #555;"></span>
+            </div>
+            <div class="task-input-container">
+                <input type="text" id="newTomorrowInput" class="task-input"
+					   placeholder="New task for tomorrow...">
+				<button id="addTomorrowButton" class="btn-primary">Add</button>
+            </div>
+            <div class="task-list" id="tomorrowTaskList">
+                <!-- Tasks will be rendered here -->
+            </div>
+        </section>
+    </main>
+    
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
